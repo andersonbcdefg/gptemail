@@ -1,4 +1,4 @@
-# GPTEmail
+# GPTemail
 
 ## Installation
 GPTemail currently supports Firefox. It is not yet published to the Add-Ons Marketplace, so you have to install it
