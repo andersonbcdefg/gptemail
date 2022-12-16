@@ -18,6 +18,8 @@ manually, following these instructions:
 
 ## Future Updates
 
+* Right now, this extension only activates on Gmail pages (using the URL). However, the text selection mechanism works easily with any webpage,
+so it should be trivial to add support for other email clients (do people use other email providers anymore? I don't know).
 * I am planning to use the WebAPI Extension polyfills to add support for Chrome/Edge/etc.
 * Plan to add support for Cohere models (their "Trial" API keys support enough requests for 1 user, so you could probably use this for free,
 instead of pennies per request). This is conditional on Cohere models writing good emails, I haven't tried yet.
