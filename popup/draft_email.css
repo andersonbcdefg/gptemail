@@ -1,0 +1,50 @@
+body {
+    padding: 0 10px;
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 500px;
+}
+
+textarea {
+    font-family: inherit;
+ }
+
+label {
+    display: inline-block;
+    padding: 5px 0;
+}
+
+#message {
+    display: block;
+    padding: 10px;
+    border: 2px solid dimgray;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: lightgreen;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#message.error {
+    background-color: lightcoral;
+    opacity: 1;
+}
+
+#message.show {
+    opacity: 1;
+}
+
+#selectedtext, #result {
+    width: 400px;
+    height: 10em;
+    font-size: 0.8em;
+}
+
+#instructions {
+    margin: 5px 0;
+    width: 400px;
+    font-size: 0.8em;
+}
+

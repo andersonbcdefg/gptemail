@@ -1,0 +1,32 @@
+{
+
+    "manifest_version": 2,
+    "name": "GPTEmail",
+    "version": "1.0",
+  
+    "description": "Uses LLMs to suggest responses to emails.",
+  
+    "icons": {
+      "48": "icons/email_icon_small.png"
+    },
+
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+
+    "browser_action": {
+      "default_icon": "icons/email_icon_32.png",
+      "default_title": "GPTemail",
+      "default_popup": "popup/draft_email.html"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://mail.google.com/*"],
+        "js": ["gptemail.js"]
+      }
+    ]
+  
+  }
+  
