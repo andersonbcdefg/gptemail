@@ -1,4 +1,7 @@
 # GPTemail
+Large language models aren't perfect, but one thing they're great at is generating highly coherent fluff—or, in today's parlance, an "e-mail". This browser extension allows you to select one (or multiple) emails with your cursor, and prompts a large language model to generate a reply for you. If you like it, please consider tipping me. :)
+
+<a href='https://ko-fi.com/E1E31ZYSW' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ## Installation
 GPTemail currently supports Firefox. It is not yet published to the Add-Ons Marketplace, so you have to install it
