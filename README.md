@@ -29,4 +29,4 @@ instead of pennies per request). This is conditional on Cohere models writing go
 * Will make this an actual extension you can install from the Firefox / Chrome marketplaces, so you don't have to add it as a temporary add-on.
 
 ## Attributions
-GPTemail uses an icon from Twitter's emoji set, which is licensed under [Creative Commons (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+GPTemail uses an icon from [Twitter's emoji set](https://github.com/twitter/twemoji), which is licensed under [Creative Commons (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
