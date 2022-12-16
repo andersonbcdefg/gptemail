@@ -8,11 +8,17 @@ manually, following these instructions:
 2. In Firefox, navigate to `about:debugging`, then click "This Firefox" on the left sidebar.
 3. Click "Load a temporary add-on", and select a file in the `gptemail` repo (`gptemail.js` will do).
 4. The GPTemail icon should appear in your Firefox menu bar! Hooray! 
-5. For GPTemail to work, you need to provide it with an OpenAI API key. Create an OpenAI account [here](https://beta.openai.com/signup/) and
-generate an API key. GPTEmail stores your API key in local storage, so it never leaves your computer. New OpenAI signups get some free usage, but 
-eventually you'll have to pay (OpenAI, not me!). It comes out to <= $0.02 per request, so unless you write tons of emails, it should be affordable!
+5. For GPTemail to work, you need to provide it with an OpenAI API key. 
+  * Create an OpenAI account [here](https://beta.openai.com/signup/) and generate an API key. 
+  * You'll probably want to stash it somewhere safe so that you can paste it in again when you restart the browser.
+  * GPTEmail stores your API key in local storage, so it never leaves your computer. It will persist across requests,
+  but I assume it might get forgotten when you restart the browser since this is a "temporary" add-on.
+  * New OpenAI signups get some free usage, but eventually you'll have to pay (OpenAI, not me!). It comes out to ≤ $0.02 per request, so unless you write   
+  thousands of emails, it should be affordable!
 
 ## Future Updates
 
 * I am planning to use the WebAPI Extension polyfills to add support for Chrome/Edge/etc.
-* Plan to add support for Cohere models (their "Trial" API keys support enough requests for 1 user, so you could probably use this for free).
+* Plan to add support for Cohere models (their "Trial" API keys support enough requests for 1 user, so you could probably use this for free,
+instead of pennies per request). This is conditional on Cohere models writing good emails, I haven't tried yet.
+* Will make this an actual extension you can install from the Firefox / Chrome marketplaces, so you don't have to add it as a one-time
