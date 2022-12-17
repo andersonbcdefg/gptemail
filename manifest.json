@@ -23,7 +23,11 @@
   
     "content_scripts": [
       {
-        "matches": ["*://mail.google.com/*", "*://app.hey.com/*"],
+        "matches": ["*://mail.google.com/*"],
+        "js": ["gptemail.js"]
+      },
+      {
+        "matches": ["*://app.hey.com/*"],
         "js": ["gptemail.js"]
       }
     ],
