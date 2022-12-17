@@ -1,7 +1,7 @@
 let result = document.querySelector("#result");
 let message = document.querySelector("#message");
 let selection = document.querySelector("#selectedtext");
-instructions = document.querySelector("#instructions");
+let instructions = document.querySelector("#instructions");
 let apikeyfield = document.querySelector("#apikey");
 let userfield = document.querySelector("#user");
 
@@ -35,7 +35,13 @@ function getSavedData() {
 function getSelection(message) {
     browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
         browser.tabs.sendMessage(tabs[0].id, message, function(response) {
-            selection.value = response.response.trim();
+            if (!response.response) {
+                toast("No text selected; you can paste it in instead.")
+                selection.focus();
+            } else {
+                selection.value = response.response.trim();
+                instructions.focus();
+            }
         });
     });
 }
@@ -88,7 +94,7 @@ function submitRequest() {
         return false;
     }
     if (!formObj.selectedtext) {
-        toast("Please select some text in the email you want to reply to.", 2500, true);
+        toast("Please select some text in the email you want to reply to, or copy it to the clipboard.", 2500, true);
         return false;
     }
 
@@ -112,6 +118,4 @@ document.querySelector("#submit").addEventListener("click", submitRequest);
 getSelection({command: "get_selection"});
 getSavedData();
 instructions.focus()
-setTimeout(_ => toast("Use the cursor to select text of the email you want to reply to. Optionally, provide instructions. Then, click 'Generate Email'."), 1000);
-
 
