@@ -19,6 +19,15 @@ manually, following these instructions:
    * New OpenAI signups get some free usage, but eventually you'll have to pay (OpenAI, not me!). It comes out to ≤ $0.02 per request, 
    so unless you write   thousands of emails, it should be affordable!
 
+## How to Use
+GPTemail is designed to be flexible, lightweight, and unobtrusive. Rather than deeply integrating with a particular email client, GPTemail just reads the text you select with your cursor. Here's how to use it:
+
+1. Navigate to your email website, and select the text you want to compose a response to. 
+2. Click on the toolbar icon, or press ⌘ + Shift + E to open the GPTemail popup.
+3. If this is your first use, you'll have to enter your preferred name to sign your emails with (in the User field), and your OpenAI API key.
+4. The text you selected will show up in the "Selected Text" field. GPTemail already understands that it should write a reply (from you) to this selected text. If there's any special instructions ("Decline the request", "Use a professional tone", "Wish them happy holidays"), add those in the optional instructions field.
+5. Click "Generate Email", and the reply will appear in the "Results" field, and will also be copied to the clipboard. If you don't like the result, you can always try again (generated emails are non-deterministic), and change your instructions to get a result more in line with what you want.
+
 ## Future Updates
 
 * Right now, this extension only activates on Gmail pages (using the URL). However, the text selection mechanism works easily with any webpage,
