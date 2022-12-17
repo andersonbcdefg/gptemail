@@ -1,8 +1,25 @@
 let result = document.querySelector("#result");
 let message = document.querySelector("#message");
 let selection = document.querySelector("#selectedtext");
+instructions = document.querySelector("#instructions");
 let apikeyfield = document.querySelector("#apikey");
 let userfield = document.querySelector("#user");
+
+function toast(message, duration=2500, error=false) {
+    let toast = document.querySelector("#message");
+    toast.textContent = message;
+    if (error) {
+        toast.classList.remove("show");
+        toast.classList.add("error");
+    } else {
+        toast.classList.remove("error");
+        toast.classList.add("show");
+    }
+    setTimeout(() => {
+        toast.classList.remove("show");
+        toast.classList.remove("error");
+    }, duration);
+}
 
 function getSavedData() {
     browser.storage.local.get(["user", "apikey"]).then(({user, apikey}) => {
@@ -55,11 +72,7 @@ async function submitOpenAIRequest(api_key, model, prompt) {
         let json = await res.json();
         return json.choices[0].text;
     } else {
-        message.textContent = "OpenAI request failed. Check your API key and try again";
-        message.classList.add("error");
-        setTimeout(() => {
-            message.classList.remove("error");
-        }, 4000);
+        toast("OpenAI request failed. Check your API key and try again", 2500, true);
         return false;
     }
 }
@@ -71,19 +84,11 @@ function submitRequest() {
 
     // Validate form
     if (!formObj.apikey || !formObj.user) {
-        message.textContent = "Please fill in the API key and user fields.";
-        message.classList.add("error");
-        setTimeout(() => {
-            message.classList.remove("error");
-        }, 4000);
+        toast("Please fill in the API key and user fields.", 2500, true);
         return false;
     }
     if (!formObj.selectedtext) {
-        message.textContent = "Please select some text in the email you want to reply to.";
-        message.classList.add("error");
-        setTimeout(() => {
-            message.classList.remove("error");
-        }, 4000);
+        toast("Please select some text in the email you want to reply to.", 2500, true);
         return false;
     }
 
@@ -92,27 +97,21 @@ function submitRequest() {
 
     // Create prompt
     let prompt = createPrompt(formObj);
-    message.textContent = "Waiting for response...";
-    message.classList.add("show");
-    setTimeout(() => {
-        message.classList.remove("show");
-    }, 4000);
+    toast("Generating response...", 2500);
     
     // Get response from OpenAI
     submitOpenAIRequest(formObj.apikey, "text-davinci-003", prompt).then((response) => {
         if (response) {
             result.value = response.trim();
             navigator.clipboard.writeText(response.trim());
-            message.textContent = "Response copied to clipboard!";
-            message.classList.add("show");
-            setTimeout(() => {
-                message.classList.remove("show");
-            }, 4000);
+            toast("Copied to clipboard!")
         }
     });
 }
 document.querySelector("#submit").addEventListener("click", submitRequest);
 getSelection({command: "get_selection"});
 getSavedData();
+instructions.focus()
+setTimeout(_ => toast("Use the cursor to select text of the email you want to reply to. Optionally, provide instructions. Then, click 'Generate Email'."), 1000);
 
 
