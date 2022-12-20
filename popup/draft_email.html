@@ -11,7 +11,15 @@
         <label for="user">User:</label>
         <input type="text" id="user" name="user" required>
         <br/>
-        <label for="apikey">OpenAI API Key:</label>
+        <span id="llm-provider-section">LLM Provider</span>
+        <br/>
+        <input type="radio" id="openai" name="provider" value="openai" checked>
+        <label for="openai">OpenAI</label>
+        &nbsp;
+        <input type="radio" id="cohere" name="provider" value="cohere" checked>
+        <label for="cohere">Cohere</label>
+        <br/>
+        <label for="apikey">API Key:</label>
         <input type="password" id="apikey" name="apikey" required>
         <br/>
         <label for="selectedtext">Selected Text:</label>
