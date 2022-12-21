@@ -132,7 +132,7 @@ function submitForm() {
 
     // Create prompt & select model
     let prompt = createPrompt(formObj);
-    let model = formObj.provider === "openai" ? "text-davinci-003" : "command-xlarge-20221108";
+    let model = formObj.provider === "openai" ? "text-davinci-003" : "xlarge-20221108";
     toast("Generating response...", 2500);
     
     // Get response from LLM API
