@@ -40,5 +40,6 @@ GPTemail is designed to be flexible, lightweight, and unobtrusive. Rather than d
 6. Click "Generate Email", and the reply will appear in the "Results" field, and will also be copied to the clipboard. If you don't like the result, you can always try again (generated emails are non-deterministic), and change your instructions to get a result more in line with what you want.
 
 ## Future Updates
-* Currently supports reading highlighted text on Gmail, Outlook, and Yahoo mail. With Hey, the extension will work, but you have to paste the text in yourself. Please let me know if there's another e-mail client you'd like to see supported!
 * Will make this an actual extension you can install from the Firefox / Chrome marketplaces, so you don't have to add it in developer mode.
+* Currently supports reading highlighted text on Gmail, Outlook, and Yahoo mail. With Hey, the extension will work, but you have to paste the text in yourself. Please let me know if there's another e-mail client you'd like to see supported!
+
