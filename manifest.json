@@ -7,7 +7,8 @@
     "description": "Uses LLMs to suggest responses to emails.",
   
     "icons": {
-      "48": "icons/email_icon_small.png"
+      "48": "icons/48.png",
+      "32": "icons/32.png"
     },
 
     "permissions": [
@@ -17,7 +18,7 @@
     ],
 
     "browser_action": {
-      "default_icon": "icons/email_icon_32.png",
+      "default_icon": "icons/32.png",
       "default_title": "GPTemail",
       "default_popup": "popup/draft_email.html"
     },
@@ -25,7 +26,10 @@
     "content_scripts": [
       {
         "matches": ["*://mail.google.com/*"],
-        "js": ["gptemail.js"]
+        "js": [
+          "browser-polyfill.min.js",
+          "gptemail.js"
+        ]
       }
     ],
 
@@ -36,6 +40,12 @@
         },
         "description": "Send a 'toggle-feature' event"
       }
+    },
+
+    "background": {
+      "scripts": [
+        "browser-polyfill.min.js"
+      ]
     }
   
   }
