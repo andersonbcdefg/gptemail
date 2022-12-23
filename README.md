@@ -1,4 +1,5 @@
 <img src="output_512.png" alt="GPTemail Icon" width="200" height="200"/>
+
 # GPTemail
 Large language models aren't perfect, but one thing they're great at is generating coherent fluff—or, in today's parlance, an "e-mail". This browser extension allows you to select one (or multiple) emails with your cursor, and prompts a large language model to generate a reply for you. If you like it, please consider tipping me. The only one making money from this extension right now is OpenAI.  :)
 
