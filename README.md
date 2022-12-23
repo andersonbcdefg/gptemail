@@ -8,7 +8,7 @@ Large language models aren't perfect, but one thing they're great at is generati
 <a href='https://ko-fi.com/E1E31ZYSW' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ## Updates
-* **2022-12-22**: Added support for Google Chrome. Not in the Chrome store yet, so you have to install it manually. Instructions below—it's not that hard, I promise! With this update, it should also be compatible with other browsers (Edge, Brave, etc.) that support WebExtensions, but I haven't tested them, so your mileage may vary! Also added support for e-mail clients other than Gmail.
+* **2022-12-22**: Added support for Google Chrome. Not in the Chrome store yet, so you have to install it manually. Instructions below—it's not that hard, I promise! With this update, it should also be compatible with other browsers (Edge, Brave, etc.) that support WebExtensions, but I haven't tested them, so your mileage may vary! Also added support for e-mail clients other than Gmail. And added a cute little icon. :)
 * **2022-12-19**: Added support for Cohere, using the `command-xlarge-11082022` model. As with OpenAI, you have to make an account and create an API key. Unlike OpenAI, Cohere is free to use (with a limit of 100 API calls per minute). Cohere is also noticeably slower, and I find that the generations are of slightly lower quality (it might respond to one part of the email, but ignore something else important). However, Cohere states that its "command" models are rapidly improving, so I'm excited to see if it gets better.
 
 ## Installation: Firefox
@@ -21,7 +21,7 @@ Large language models aren't perfect, but one thing they're great at is generati
 ## Installation: Chrome
 
 1. Clone this repo.
-2. In Chrome, navigate to `chrome://extensions/`. Make sure "Developer mode" is enabled (top right).
+2. In Chrome, navigate to `chrome://extensions`. Make sure "Developer mode" is enabled (top right).
 3. Click "Load unpacked", and select the `gptemail` repo that you just downloaded.
 4. The GPTemail extension is now loaded! If you want it to be visible in the toolbar, you can pin it. The first time you want to use it, you may have to give it permissions to read the webpage you're on.
 
