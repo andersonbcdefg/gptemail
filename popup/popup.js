@@ -39,18 +39,16 @@ function getSavedData() {
     });
 }
 
-function getSelection(message) {
-    browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        browser.tabs.sendMessage(tabs[0].id, message, function(response) {
-            if (!response.response) {
-                toast("No text selected; you can paste it in instead.")
-                selection.focus();
-            } else {
-                selection.value = response.response.trim();
-                instructions.focus();
-            }
-        });
-    });
+async function getSelection(message) {
+    let tabs = await browser.tabs.query({active: true, currentWindow: true});
+    let response = await browser.tabs.sendMessage(tabs[0].id, message);
+    if (!response.response) {
+        toast("No text selected; you can paste it in instead.")
+        selection.focus();
+    } else {
+        selection.value = response.response.trim();
+        instructions.focus();
+    }
 }
 
 function createPrompt(formObj) {
@@ -147,5 +145,4 @@ function submitForm() {
 document.querySelector("#submit").addEventListener("click", submitForm);
 getSelection({command: "get_selection"});
 getSavedData();
-instructions.focus()
 

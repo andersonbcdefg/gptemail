@@ -1,9 +1,8 @@
 {
 
-    "manifest_version": 2,
     "name": "GPTEmail",
+    "manifest_version": 2,
     "version": "1.0",
-  
     "description": "Uses LLMs to suggest responses to emails.",
   
     "icons": {
@@ -25,7 +24,12 @@
   
     "content_scripts": [
       {
-        "matches": ["*://mail.google.com/*"],
+        "matches": [
+          "*://mail.google.com/*",
+          "*://mail.yahoo.com/*",
+          "*://outlook.live.com/*",
+          "*://app.hey.com/*"
+        ],
         "js": [
           "browser-polyfill.min.js",
           "gptemail.js"
@@ -40,13 +44,6 @@
         },
         "description": "Send a 'toggle-feature' event"
       }
-    },
-
-    "background": {
-      "scripts": [
-        "browser-polyfill.min.js"
-      ]
     }
-  
   }
   
