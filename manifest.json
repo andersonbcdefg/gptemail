@@ -1,7 +1,7 @@
 {
 
     "name": "GPTemail",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "version": "1.0.0",
     "description": "GPTemail uses large language models (like OpenAI's GPT3) to suggest email replies for you.",
   
@@ -16,7 +16,7 @@
       "clipboardWrite"
     ],
 
-    "browser_action": {
+    "action": {
       "default_icon": "icons/32.png",
       "default_title": "GPTemail",
       "default_popup": "popup/draft_email.html"
