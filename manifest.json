@@ -3,7 +3,7 @@
     "name": "GPTemail",
     "manifest_version": 2,
     "version": "1.0.0",
-    "description": "GPTemail uses large language models (like OpenAI's GPT3) to suggest a email replies for you.",
+    "description": "GPTemail uses large language models (like OpenAI's GPT3) to suggest email replies for you.",
   
     "icons": {
       "48": "icons/48.png",
