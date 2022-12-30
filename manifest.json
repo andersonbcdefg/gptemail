@@ -1,9 +1,9 @@
 {
 
-    "name": "GPTEmail",
+    "name": "GPTemail",
     "manifest_version": 2,
     "version": "1.0.0",
-    "description": "GPTemail allows you to capture information from your email client, and sent it to a large language model (like OpenAI's GPT3) to suggest a reply for you. Works on multiple e-mail clients, and allows you to choose between Cohere and OpenAI as the provider for the language model. Detailed usage instructions here: https://github.com/andersonbcdefg/gptemail",
+    "description": "GPTemail uses large language models (like OpenAI's GPT3) to suggest a email replies for you.",
   
     "icons": {
       "48": "icons/48.png",
