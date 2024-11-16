@@ -9,7 +9,7 @@ Large language models aren't perfect, but one thing they're great at is generati
 
 ## Updates
 * **2022-12-22**: Added support for Google Chrome. Not in the Chrome store yet, so you have to install it manually. Instructions below—it's not that hard, I promise! With this update, it should also be compatible with other browsers (Edge, Brave, etc.) that support WebExtensions, but I haven't tested them, so your mileage may vary! Also added support for e-mail clients other than Gmail. Finally, I added a cute little icon. :)
-* **2022-12-19**: Added support for Cohere, using the `command-xlarge-11082022` model. As with OpenAI, you have to make an account and create an API key. Unlike OpenAI, Cohere is free to use (with a limit of 100 API calls per minute). Cohere is also noticeably slower, and I find that the results are of noticeably lower quality. However, Cohere states that its "command" models are rapidly improving, so I'm excited to see if it gets better.
+* **2022-12-19**: Added support for Cohere, using the `command-xlarge-11082022` model. As with OpenAI, you have to make an account and create an API key. Unlike OpenAI, Cohere is free to use (with a limit of 100 API calls per minute). Cohere is a bit slower, and the results can be hit-or-miss. Cohere says its "command" models are rapidly improving, so I'm excited to update to the next version when it becomes available.
 
 ## Installation: Firefox
 
